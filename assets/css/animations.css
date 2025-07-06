@@ -1,0 +1,118 @@
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animations */
+.hero-content,
+.hero-image,
+.skills-container,
+.projects-container,
+.about-container,
+.contact-container,
+.services-container {
+    animation: fadeIn 1s ease forwards;
+}
+
+/* Delay animations for staggered effect */
+.hero-content {
+    animation-delay: 0.2s;
+}
+
+.hero-image {
+    animation-delay: 0.4s;
+}
+
+.skills-container {
+    animation-delay: 0.2s;
+}
+
+.projects-container {
+    animation-delay: 0.3s;
+}
+
+.services-container {
+    animation-delay: 0.3s;
+}
+
+/* Pulse Animation for CTA */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.btn.primary {
+    animation: pulse 2s infinite;
+}
+
+/* Hover Effects */
+.skill-card:hover i,
+.service-card:hover i {
+    animation: bounce 0.5s ease;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Social Icons Hover */
+.social-links a:hover i,
+.footer-links a:hover i {
+    animation: spin 0.5s ease;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Floating Animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.hero-image img {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Progress Bar Animation */
+.progress-bar {
+    animation: progress 1.5s ease-out forwards;
+}
+
+@keyframes progress {
+    from {
+        width: 0;
+    }
+    to {
+        width: attr(data-level);
+    }
+}
